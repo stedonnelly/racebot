@@ -1,0 +1,6 @@
+nextcord
+pyyaml
+sqlalchemy
+sqlalchemy[asyncio]
+aiosqlite
+alembic

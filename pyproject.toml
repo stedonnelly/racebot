@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "racebot2"
+description = "A general all purpose bot for racing servers"
+authors = [
+    { name = "Dr. Shaun T. E. Donnelly", email = "shaun.t.e.donnelly@gmail.com"}
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.12"
+
+dependencies = [
+    "nextcord",
+    "pyyaml",
+    "pydantic",
+    "sqlalchemy",
+    "sqlalchemy[asyncio]",
+    "aiosqlite",
+    "alembic",
+]
+
+dynamic = ["version"]
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "docs"]
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+line_length = 79
+known_third_party = []
+known_local_folder = "racebot"
+
+[project.scripts]
+racebot-migrate = "racebot.migrations:apply_migrations"
