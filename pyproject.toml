@@ -3,7 +3,7 @@ requires = ["setuptools>=64", "setuptools-scm>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "racebot2"
+name = "racebot"
 description = "A general all purpose bot for racing servers"
 authors = [
     { name = "Dr. Shaun T. E. Donnelly", email = "shaun.t.e.donnelly@gmail.com"}
@@ -22,6 +22,7 @@ dependencies = [
     "sqlalchemy[asyncio]",
     "aiosqlite",
     "alembic",
+    "dotenv",
 ]
 
 dynamic = ["version"]
