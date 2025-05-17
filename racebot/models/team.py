@@ -9,7 +9,7 @@ class Team(Base):
     __tablename__ = "team"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String, nullable=False)
+    name = Column(String(255), nullable=False)
     server_id = Column(Integer, ForeignKey("server.id"), nullable=False)
 
     server = relationship("Server", back_populates="teams")

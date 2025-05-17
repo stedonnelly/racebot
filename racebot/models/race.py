@@ -10,7 +10,7 @@ class Race(Base):
     __tablename__ = "race"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    name = Column(String(255))
     date = Column(DateTime, default=datetime.datetime.utcnow)
     server_id = Column(Integer, ForeignKey("server.id"), nullable=False)
     tier_id = Column(Integer, ForeignKey("tier.id"), nullable=True)

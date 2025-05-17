@@ -9,8 +9,8 @@ class Driver(Base):
     __tablename__ = "driver"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String)
-    discord_user_id = Column(String)
+    name = Column(String(255))
+    discord_user_id = Column(String(64))
     server_id = Column(Integer, ForeignKey("server.id"), nullable=False)
     team_id = Column(Integer, ForeignKey("team.id"), nullable=True)
 

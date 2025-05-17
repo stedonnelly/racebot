@@ -23,6 +23,9 @@ dependencies = [
     "aiosqlite",
     "alembic",
     "dotenv",
+    "asyncmy",
+    "pymysql",
+    "cryptography",
 ]
 
 dynamic = ["version"]

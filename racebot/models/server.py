@@ -9,8 +9,8 @@ class Server(Base):
     __tablename__ = "server"
 
     id = Column(Integer, primary_key=True)
-    discord_guild_id = Column(String, unique=True, nullable=False)
-    name = Column(String)
+    discord_guild_id = Column(String(64), unique=True, nullable=False)
+    name = Column(String(255))
 
     teams = relationship("Team", back_populates="server", cascade="all, delete-orphan")
     drivers = relationship("Driver", back_populates="server", cascade="all, delete-orphan")

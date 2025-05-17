@@ -6,3 +6,6 @@ aiosqlite
 alembic
 dotenv
 pydantic
+asyncmy
+pymysql
+cryptography
