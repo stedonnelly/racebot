@@ -4,4 +4,4 @@
 import subprocess
 
 def apply_migrations():
-    subprocess.run(["alembic", "upgrade", "head"], check=True)
+    subprocess.run([sys.executable, "-m", "alembic", "upgrade", "head"], check=True)
