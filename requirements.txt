@@ -1,11 +1,22 @@
+# Bot + Discord
 nextcord
-pyyaml
+
+# Environment
+python-dotenv
+
+# FastAPI backend
+fastapi
+uvicorn[standard]
+
+# Database
 sqlalchemy
 sqlalchemy[asyncio]
-aiosqlite
 alembic
-dotenv
+pymysql  # Required for SQLAlchemy + MySQL connector
+
+# Validation
 pydantic
-asyncmy
-pymysql
+
+# Optional utilities you already had
+pyyaml
 cryptography
